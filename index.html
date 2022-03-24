@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene background="color:white">
+
+        <a-camera position="0 8 15"></a-camera>
+    
+        <!-------------------------------------------Asset Management------------------------------------------->
+        <a-assets timeout="10000">
+    
+          <a-asset-item id="robot" src="./images/c-146.glb"></a-asset-item>
+
+          <a-entity>
+            <a-entity position="-5 2 0"  scale="0.05 0.05 0.05" glb-model="#robot" shadow="cast: true;">
+            </a-entity>
+         
+        </a-assets>
+    </a-scene>
+</body>
+  
